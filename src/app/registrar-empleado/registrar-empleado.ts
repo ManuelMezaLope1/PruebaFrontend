@@ -27,9 +27,11 @@ export class RegistrarEmpleado {
         console.log(dato);
         this.irALaListaDeEmpleados();
       }),
-      catchError(error => {
-        console.log(error);
-        return throwError(() => new Error(error));
+      catchError(err => {
+        console.log("ERROR COMPLETO:", err);
+        console.log("STATUS:", err.status);
+        console.log("BODY:", err.error);
+        return throwError(() => new Error(err));
       })
     ).subscribe();
   }
