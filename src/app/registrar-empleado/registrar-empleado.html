@@ -49,6 +49,17 @@
             </div>
         </div>
 
+        <div class="form-group">
+            <label>Contraseña: </label>
+            <input type="password" class="form-control" id="password" [(ngModel)]="empleado.password" name="password"
+                required minlength="4" placeholder="Digite su contraseña" #password="ngModel" />
+            <div class="alert alert-danger" *ngIf="password.invalid && (password.dirty || password.touched)">
+                <div *ngIf="password.errors?.['required']">
+                    Digite su contraseña por favor
+                </div>
+            </div>
+        </div>
+
         <button class="btn btn-success" [disabled]="!empleadoForm.form.valid">Guardar</button>
     </form>
 </div>
