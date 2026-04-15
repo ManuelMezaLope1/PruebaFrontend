@@ -9,7 +9,9 @@ import { Empleado } from './empleado';
 export class EmpleadoServicio {
   private baseURL="tender-expression-production-e886.up.railway.app/api/v1/empleados";
 
-  constructor(private HttpClient: HttpClient){}
+  constructor(private HttpClient: HttpClient){
+    
+  }
 
   obtenerListaDeEmpleados(): Observable<Empleado[]>{
     return this.HttpClient.get<Empleado[]>(`${this.baseURL}`);
