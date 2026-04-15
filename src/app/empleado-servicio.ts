@@ -7,7 +7,7 @@ import { Empleado } from './empleado';
   providedIn: 'root',
 })
 export class EmpleadoServicio {
-  private baseURL="tender-expression-production-e886.up.railway.app/api/v1/empleados";
+  private baseURL="https://tender-expression-production-e886.up.railway.app/api/v1/empleados";
 
   constructor(private HttpClient: HttpClient){
     
