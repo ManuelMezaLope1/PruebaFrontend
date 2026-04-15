@@ -6,6 +6,7 @@
             <th>Nombre</th>
             <th>Apellido</th>
             <th>Email</th>
+            <th>Contraseña</th>
             <th>Acciones</th>
         </tr>
     </thead>
@@ -15,7 +16,7 @@
             <td>{{emp.nombre}}</td>
             <td>{{emp.apellido}}</td>
             <td>{{emp.email}}</td>
-
+            <td>{{emp.password}}</td>
             <td>
                 <button (click)="actualizarEmpleado(emp.id)" class="btn btn-info">Editar</button>
                 <button (click)="eliminarEmpleado(emp.id)" class="btn btn-danger"
